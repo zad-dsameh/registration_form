@@ -1,0 +1,5 @@
+.form-control input[type=number]::-webkit-inner-spin-button,
+.form-control input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
