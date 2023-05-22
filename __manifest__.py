@@ -24,11 +24,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['website'],
+    'depends': ['website', 'auth_signup'],
 
     # always loaded
     'data': [
         'views/registration_form_view.xml',
     ],
+    #
+    # 'assets': {
+    #     'web.assets_backend'[
+    #         'registration_form/static/src/css/remove_arrows_on_inputs.css',
+    #     ], },
     "license": "LGPL-3",
 }

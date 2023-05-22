@@ -1,16 +1,28 @@
 <odoo>
     <data>
         <template id="signup_phone_field" inherit_id="auth_signup.fields">
-            auth_signup.fields
+            <!--  if I want to put my new fields after Confirm Password field I will use this xpath
+             <xpath expr="//div[contains(@class, 'form-group')][last()]" position="after">        -->
             <xpath expr="//input[@type='text']" position="after">
-                <div class="form-group field-phone_number">
-                    <label for="phone_number">Your Phone Number</label>
-                    <input type="number" name="phone_number" t-att-value="phone_number" id="phone_number"
-                           class="form-control form-control-sm" placeholder="e.g. 01234324543"
+
+                <div class="form-group field-mobile_field">
+                    <label for="mobile_field">Your Mobile</label>
+                    <input type="number" name="mobile_field" t-att-value="request.params.get('mobile_field')"
+                           id="mobile_field" class="form-control form-control-sm" placeholder="e.g. 01204324543"
+                           required="required" t-att-readonly="'readonly' if only_passwords else None"
+                           t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
+                </div>
+
+                <div class="form-group field-phone_field">
+                    <label for="phone_field">Your Phone</label>
+                    <input type="number" name="phone_field" t-att-value="request.params.get('phone_field')"
+                           id="phone_field" class="form-control form-control-sm" placeholder="e.g. 022432173"
                            required="required" t-att-readonly="'readonly' if only_passwords else None"
                            t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
                 </div>
             </xpath>
         </template>
+
+
     </data>
 </odoo>
