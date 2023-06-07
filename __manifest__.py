@@ -31,10 +31,5 @@
         'views/registration_form_view.xml',
     ],
 
-    'assets': {
-        'web.assets_frontend': [
-            'registration_form/static/**/*',
-        ],
-    },
     "license": "LGPL-3",
 }
